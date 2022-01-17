@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('produtos', 'App\Http\Controllers\ProdutoController', [
+    'only' => ['store', 'index', 'show', 'destroy']
+]); 
+
+Route::post('compras', [App\Http\Controllers\ComprasController::class, 'compra']);
+
+Route::post('pagamento/compras', [App\Http\Controllers\ComprasController::class, 'pagamento']);
