@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Produto;
 use App\Http\Requests\StoreProdutoRequest;
-use App\Http\Requests\UpdateProdutoRequest;
 
 class ProdutoController extends Controller
 {

@@ -24,7 +24,9 @@ class StoreProdutoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nome' => 'required',
+            'valor_unitario' => 'required',
+            'qtde_estoque' => 'required'
         ];
     }
 }
